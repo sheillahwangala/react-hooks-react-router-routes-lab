@@ -7,7 +7,29 @@ import Directors from "./Directors";
 import Movies from "./Movies";
 
 function App() {
-  return <div>{/*{code here}*/}</div>;
-}
+  return (
+    <div>
+      <NavBar />
+      <Switch>
+        <Route path="/movies"> <Movies /> </Route>
+        <Route path="/directors"> <Directors /> </Route>
+        <Route path="/actors"> <Actors /> </Route>
+        <Route path="/"> <Home /> </Route>
+      </Switch>
+    </div>
+  );
+};
 
 export default App;
+
+// using routers insted of switch
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+{/* <Router>
+        <NavBar  />
+        <Routes>
+          <Route path="/movies"> <Movies /> </Route>
+          <Route path="/directors"> <Directors /> </Route>
+          <Route path="/actors"> <Actors /> </Route>
+          <Route path="/"> <Home /> </Route>
+        </Routes>
+</Router> */}
